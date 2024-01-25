@@ -1,50 +1,47 @@
 import React from 'react'
+import { Search, Person1, ArrowDown, Bell, Calender } from "../assets";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <div className="navbar-start">
-        <a className="btn btn-ghost text-xl" href="/">
-          daisyUI
+    <div className="bg-slate-50 grid grid-cols-10 p-3 items-center">
+      <div className="col-span-6 flex justify-between items-center px-3">
+        <a className="font-medium text-2xl capitalize" href="/">
+          dashboard
         </a>
-        <button className="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
+
+        {/* Search */}
+        <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-full px-6 py-3">
+          <img src={Search} alt="Logo" className="w-5 h-5" />
+          <input
+            type="text"
+            className=" w-64 outline-none text-gray-400 text-lg"
+            placeholder="Search"
+          />
+        </div>
       </div>
 
-      <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle">
-          <div className="indicator">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              />
-            </svg>
-            <span className="badge badge-xs badge-primary indicator-item"></span>
+      <div className="col-span-4 flex justify-between items-center px-2">
+        {/* Calender */}
+        <div className="flex items-center gap-3  px-4 py-2">
+          <img src={Calender} alt="Logo" className="w-5 h-5" />
+          <p className='text-base font-semibold'>November 15, 2023</p>
+        </div>
+
+        {/* Notification */}
+        <img
+          src={Bell}
+          alt="Logo"
+          className="border p-2 border-gray-200 rounded-full w-10 h-10"
+        />
+        {/* Profile */}
+        <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-full px-4 py-2">
+          <img src={Person1} alt="Logo" className="w-10 h-10 rounded-full" />
+          <div className="text-right space-y-3">
+            <h5 className="font-medium text-lg leading-3">Justin Bergson</h5>
+            <p className="text-base text-gray-500 leading-3">Justin@gmail.com</p>
           </div>
-        </button>
+          <img src={ArrowDown} alt="Logo" className="w-5 h-5" />
+        </div>
       </div>
     </div>
   );
