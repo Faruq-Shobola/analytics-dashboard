@@ -5,7 +5,7 @@ import Icon3 from "./Icon.png";
 import Icon4 from "./Frame 13.png";
 import Icon5 from "./Frame 11.png";
 import Icon6 from "./Info.png";
-import Light from "./light.png";
+import Light from "./brightness.png";
 import Moon from "./moon.png";
 import Setting from "./setting.png";
 import Icon7 from "./Icon-2.png";

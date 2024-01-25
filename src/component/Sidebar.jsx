@@ -28,7 +28,7 @@ const Sidebar = () => {
         <img src={Icon5} alt="Logo" />
         <img src={Icon6} alt="Logo" />
         <div className="theme p-2 bg-white rounded-full space-y-5">
-          <img src={Light} alt="Logo" className="w-9" />
+          <img src={Light} alt="Logo" className="w-9 bg-green-600 p-1.5 rounded-full" />
           <img src={Moon} alt="Logo" className="w-9" />
         </div>
       </div>
