@@ -10,12 +10,12 @@ const Dashboard = () => {
         <aside className="fixed overflow-auto h-screen left-0 top-0 w-20 py-5 bg-slate-100">
           <Sidebar />
         </aside>
-        <div className='!ml-20 h-[10000px]'>
-            <nav className="top-0 left-0 bg-blue-500 sticky">
+        <div className='!ml-20'>
+            <nav className="top-0 left-0 sticky">
             <Navbar />
             </nav>
-            <main className="bg-slate-400">
-            <Main />
+            <main className="bg-gray-50 p-4">
+                <Main />
             </main>
         </div>
       </div>

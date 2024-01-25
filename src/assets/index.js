@@ -21,6 +21,7 @@ import Person6 from "./person6.jpg";
 import ArrowDown from "./arrow-down.png";
 import Bell from "./bell-outline.png";
 import Calender from "./calender.png";
+import DocumentDownload from "./document-download.png";
 
 export {
   logo,
@@ -46,4 +47,5 @@ export {
   ArrowDown,
   Bell,
   Calender,
+  DocumentDownload,
 };
