@@ -12,10 +12,12 @@ import {
 
 const Orders = () => {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto h-96">
       <div className="flex justify-between pb-2">
         <h5 className="font-medium text-xl capitalize"> last orders</h5>
-        <a className="text-base text-green-500 capitalize" href='/'>see all</a>
+        <a className="text-base text-green-500 capitalize" href="/">
+          see all
+        </a>
       </div>
       <table className="table">
         {/* head */}
@@ -175,6 +177,64 @@ const Orders = () => {
             </td>
             <td className="p-1 py-3 text-base text-gray-400">Nov 13, 2023</td>
             <td className="p-1 py-3 text-base font-medium">$78,000</td>
+            <td className="p-1 py-3 text-base text-green-500 capitalize">
+              paid
+            </td>
+            <td className="p-1 py-3">
+              <div className="flex items-center gap-1 cursor-pointer">
+                <img src={DocumentDownload} alt="Logo" className="" />
+                <p className="text-base capitalize">view</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="p-1 py-2">
+              <div className="flex items-center gap-3">
+                <div className="avatar">
+                  <div className="mask mask-squircle w-10 h-10">
+                    <img
+                      src={Person1}
+                      alt="Img"
+                      className="w-10 h-10 rounded-full"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="font-medium text-base">Thomas wall</div>
+                </div>
+              </div>
+            </td>
+            <td className="p-1 py-3 text-base text-gray-400">Nov 13 2023</td>
+            <td className="p-1 py-3 text-base font-medium">$120,000</td>
+            <td className="p-1 py-3 text-base text-red-500 capitalize">
+              refund
+            </td>
+            <td className="p-1 py-3">
+              <div className="flex items-center gap-1 cursor-pointer">
+                <img src={DocumentDownload} alt="Logo" className="" />
+                <p className="text-base capitalize">view</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="p-1 py-2">
+              <div className="flex items-center gap-3">
+                <div className="avatar">
+                  <div className="mask mask-squircle w-10 h-10">
+                    <img
+                      src={Person3}
+                      alt="Img"
+                      className="w-10 h-10 rounded-full"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="font-medium text-base">Gabs Matin</div>
+                </div>
+              </div>
+            </td>
+            <td className="p-1 py-3 text-base text-gray-400">Nov 12, 2023</td>
+            <td className="p-1 py-3 text-base font-medium">$58,000</td>
             <td className="p-1 py-3 text-base text-green-500 capitalize">
               paid
             </td>
