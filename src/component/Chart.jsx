@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import salesData from "../sales_data.json";
 import {
   Bar,
@@ -12,32 +12,41 @@ import {
 } from "recharts";
 
 const Chart = () => {
-
-  // Get the largest value in sales data
-  const getBiggestSales = (data) => {
-    const biggestSale = data.reduce((acc, item, idx, arr) => {
-      return item.sales > arr[acc].sales ? idx : acc;
-    }, 0)
-    return biggestSale
-    
-  }
-
   const [data, setData] = useState(salesData["monthly"]);
   const [period, setPeriod] = useState("monthly");
-  const [biggestSales, setBiggestSales] = useState(getBiggestSales(data))
-  const [activeBar, setActiveBar] = useState(biggestSales, 0)
+  const [biggestSale, setBiggestSale] = useState(0);
+  const [activeBar, setActiveBar] = useState(0);
+  const [leaveTimeoutId, setLeaveTimeoutId] = useState(null);
+
+  // Get the largest value in sales data
+  useEffect(() => {
+    const biggestSaleIndex = data.reduce((acc, item, idx, arr) => {
+      return item.sales > arr[acc].sales ? idx : acc;
+    }, 0);
+    setBiggestSale(biggestSaleIndex);
+    setActiveBar(biggestSaleIndex);
+  }, [data]);
 
   // Set activeBar to the bar of the highest sales when the mouse hover
   const onMouseOver = (index) => {
+    // Clear any existing timeout to prevent it from firing
+    if (leaveTimeoutId) {
+      clearTimeout(leaveTimeoutId);
+      setLeaveTimeoutId(null);
+    }
     setActiveBar(index);
   };
 
   // Set activeBar to the bar of the highest sales when the mouse leaves
   const onMouseOut = () => {
-    setActiveBar(biggestSales, 0);
-  }
+    // Start a new timeout to delay the deactivation
+    const timeoutId = setTimeout(() => {
+      setActiveBar(biggestSale);
+    }, 500);
+    setLeaveTimeoutId(timeoutId);
+  };
 
-  // handle chart option
+  // handle chart display option(Weekly, MOnthly, Yearly)
   const handleChange = (event) => {
     const value = event.target.value;
     setPeriod(value);
@@ -51,6 +60,33 @@ const Chart = () => {
         : salesData["yearly"]
     );
   };
+
+  // Cleanup the timeout on component unmount
+  useEffect(() => {
+    return () => {
+      if (leaveTimeoutId) {
+        clearTimeout(leaveTimeoutId);
+      }
+    };
+  }, [leaveTimeoutId]);
+
+  // Custom tooltip component
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip" style={{
+          backgroundColor: '#000', 
+          padding: '5px 10px', 
+          borderRadius: '10px', 
+          color: 'white',
+        }}>
+          <p className="label" style={{ margin: 0 }}>${payload[0].value.toLocaleString()}</p>
+        </div>
+      );
+    }
+    return null;
+  }
+
 
   return (
     <div className="overflow-x-auto h-96">
@@ -86,25 +122,30 @@ const Chart = () => {
                 y2="100%"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stopColor="green" />
+                <stop offset="0" stopColor="Green" />
+                <stop offset="0.5" stopColor="#34CAA5" />
                 <stop offset="1" stopColor="#FFFFFF" />
               </linearGradient>
             </defs>
             <CartesianGrid vertical={false} strokeDasharray="3 3" />
             <XAxis dataKey="name" height={20} />
             <YAxis />
-            <Tooltip />
-            <Bar dataKey="sales" fill="lightgreen" barSize={40} onMouseOut={onMouseOut}>
-              {
-                data.map((entry, index) => (
-                  <Cell
-                    cursor="pointer"
-                    fill={index === activeBar ? 'url(#colorUv)' : 'lightblue'}
-                    key={`cell-${index}`}
-                    onMouseOver={() => onMouseOver(index)}
-                  />
-                ))
-              }
+            <Tooltip content={<CustomTooltip />} />
+            <Bar
+              dataKey="sales"
+              fill="lightgreen"
+              barSize={40}
+              radius={[25, 25, 0, 0]}
+              onMouseOut={onMouseOut}
+            >
+              {data.map((entry, index) => (
+                <Cell
+                  cursor="pointer"
+                  fill={index === activeBar ? "url(#colorUv)" : "#15dfee28"}
+                  key={`cell-${index}`}
+                  onMouseOver={() => onMouseOver(index)}
+                />
+              ))}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
