@@ -5,14 +5,14 @@ const Platform = () => {
     <section className="overflow-auto h-96">
       <section className="flex flex-col">
         {/* Heading */}
-        <section className="flex justify-between pb-2">
+        <section className="flex justify-between p-5 pb-2">
           <h5 className="font-medium text-xl capitalize"> top platforms</h5>
           <a className="text-base text-green-500 capitalize" href="/">
             see all
           </a>
         </section>
         {/* Platforms Section */}
-        <section className="pt-5 flex flex-col gap-4">
+        <section className="p-5 flex flex-col gap-4">
           {/* platform 1 */}
           <figure>
             <h5 className="font-medium text-xl capitalize"> Book Bazaar</h5>

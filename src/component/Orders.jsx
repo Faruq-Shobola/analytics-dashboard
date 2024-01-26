@@ -13,14 +13,14 @@ const Orders = () => {
   return (
     <section className="overflow-x-auto h-96">
       {/* Heading */}
-      <section className="flex justify-between pb-2">
+      <section className="flex justify-between  p-5 pb-2">
         <h5 className="font-medium text-xl capitalize"> last orders</h5>
         <a className="text-base text-green-500 capitalize" href="/">
           see all
         </a>
       </section>
       {/* Orders Table */}
-      <section className="pt-5">
+      <section className="p-5">
         <table className="table">
             {/* head */}
             <thead>
