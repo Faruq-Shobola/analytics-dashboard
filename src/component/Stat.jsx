@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import LineData from "../line_chart_data.json";
 import { Cart, Box, Rotate, Coin, Increase, Decrease } from "../assets";
+import {
+  Area,
+  AreaChart,
+  YAxis,
+  XAxis,
+  ResponsiveContainer,
+} from "recharts";
 
 const Stat = () => {
+  const [data1, setData] = useState(LineData["increase"]);
+  const [data2, setData2] = useState(LineData["decrease"]);
+
   return (
     <div className="grid grid-cols-2 grid-rows-2 gap-5 h-full">
       {/* Stat-1 */}
@@ -14,7 +25,27 @@ const Stat = () => {
               alt="Logo"
               className="border p-2 border-gray-200 rounded-full w-10 h-10"
             />
-            <div></div>
+            {/* Line chart 1 */}
+            <div className="w-32 h-14">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={data1} margin={{ top: -5 }}>
+                  <defs>
+                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <XAxis dataKey="time" hide={true} />
+                  <YAxis hide={true} />
+                  <Area
+                    dataKey="value"
+                    stroke="#82ca9d"
+                    fillOpacity={1}
+                    fill="url(#colorPv)"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
           </div>
           {/* stat details */}
           <div className="stat-title text-xl text-gray-400">Total Order</div>
@@ -38,7 +69,27 @@ const Stat = () => {
               alt="Logo"
               className="border p-2 border-gray-200 rounded-full w-10 h-10"
             />
-            <div></div>
+            {/* Line chart 2 */}
+            <div className="w-32 h-14">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={data2} margin={{ top: -5 }}>
+                  <defs>
+                    <linearGradient id="color2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#FECACA" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#FECACA" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <XAxis dataKey="time" hide={true} />
+                  <YAxis hide={true} />
+                  <Area
+                    dataKey="value"
+                    stroke="#ef4444"
+                    fillOpacity={1}
+                    fill="url(#color2)"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
           </div>
           {/* stat details */}
           <div className="stat-title text-xl text-gray-400">Total Refund</div>
@@ -62,7 +113,27 @@ const Stat = () => {
               alt="Logo"
               className="border p-2 border-gray-200 rounded-full w-10 h-10"
             />
-            <div></div>
+            {/* Line chart 3 */}
+            <div className="w-32 h-14">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={data2} margin={{ top: -5 }}>
+                  <defs>
+                    <linearGradient id="color2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#FECACA" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#FECACA" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <XAxis dataKey="time" hide={true} />
+                  <YAxis hide={true} />
+                  <Area
+                    dataKey="value"
+                    stroke="#ef4444"
+                    fillOpacity={1}
+                    fill="url(#color2)"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
           </div>
           {/* stat details */}
           <div className="stat-title text-xl text-gray-400">Average Sales</div>
@@ -86,7 +157,27 @@ const Stat = () => {
               alt="Logo"
               className="border p-2 border-gray-200 rounded-full w-10 h-10"
             />
-            <div></div>
+            {/* Line chart 4 */}
+            <div className="w-32 h-14">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={data1} margin={{ top: -5 }}>
+                  <defs>
+                    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+                      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <XAxis dataKey="time" hide={true} />
+                  <YAxis hide={true} />
+                  <Area
+                    dataKey="value"
+                    stroke="#82ca9d"
+                    fillOpacity={1}
+                    fill="url(#colorPv)"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
           </div>
           {/* stat details */}
           <div className="stat-title text-xl text-gray-400">Total Income</div>
