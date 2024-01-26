@@ -22,6 +22,12 @@ import ArrowDown from "./arrow-down.png";
 import Bell from "./bell-outline.png";
 import Calender from "./calender.png";
 import DocumentDownload from "./document-download.png";
+import Cart from "./shopping-cart.png";
+import Box from "./box-tick.png";
+import Rotate from "./3d-rotate.png";
+import Coin from "./coin.png";
+import Increase from "./increase.png";
+import Decrease from "./decrease.png";
 
 export {
   logo,
@@ -48,4 +54,10 @@ export {
   Bell,
   Calender,
   DocumentDownload,
+  Cart,
+  Box,
+  Rotate,
+  Coin,
+  Increase,
+  Decrease,
 };
