@@ -1,16 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const Platform = () => {
   return (
-    <div className="overflow-auto h-96">
-      <div className="flex flex-col">
-        <div className="flex justify-between pb-2">
+    <section className="overflow-auto h-96">
+      <section className="flex flex-col">
+        {/* Heading */}
+        <section className="flex justify-between pb-2">
           <h5 className="font-medium text-xl capitalize"> top platforms</h5>
           <a className="text-base text-green-500 capitalize" href="/">
             see all
           </a>
-        </div>
-        <div className="pt-5 flex flex-col gap-4">
+        </section>
+        {/* Platforms Section */}
+        <section className="pt-5 flex flex-col gap-4">
+          {/* platform 1 */}
           <figure>
             <h5 className="font-medium text-xl capitalize"> Book Bazaar</h5>
             <progress
@@ -23,6 +26,7 @@ const Platform = () => {
               <span className="text-lg text-gray-400">+15%</span>
             </p>
           </figure>
+          {/* platform 2 */}
           <figure>
             <h5 className="font-medium text-xl capitalize">Artisan Aisle</h5>
             <progress
@@ -35,6 +39,7 @@ const Platform = () => {
               <span className="text-lg text-gray-400">+10%</span>
             </p>
           </figure>
+          {/* platform 3 */}
           <figure>
             <h5 className="font-medium text-xl capitalize">Toy Troop</h5>
             <progress
@@ -47,6 +52,7 @@ const Platform = () => {
               <span className="text-lg text-gray-400">+8%</span>
             </p>
           </figure>
+          {/* platform 4 */}
           <figure>
             <h5 className="font-medium text-xl capitalize"> XStore</h5>
             <progress
@@ -59,6 +65,7 @@ const Platform = () => {
               <span className="text-lg text-gray-400">+5%</span>
             </p>
           </figure>
+          {/* platform 5 */}
           <figure>
             <h5 className="font-medium text-xl capitalize">park doen</h5>
             <progress
@@ -71,10 +78,10 @@ const Platform = () => {
               <span className="text-lg text-gray-400">+10%</span>
             </p>
           </figure>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </section>
   );
-}
+};
 
-export default Platform
+export default Platform;
