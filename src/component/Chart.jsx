@@ -7,17 +7,41 @@ import {
   XAxis,
   CartesianGrid,
   Tooltip,
+  Cell,
   ResponsiveContainer,
 } from "recharts";
 
 const Chart = () => {
+
+  // Get the largest value in sales data
+  const getBiggestSales = (data) => {
+    const biggestSale = data.reduce((acc, item, idx, arr) => {
+      return item.sales > arr[acc].sales ? idx : acc;
+    }, 0)
+    return biggestSale
+    
+  }
+
   const [data, setData] = useState(salesData["monthly"]);
   const [period, setPeriod] = useState("monthly");
+  const [biggestSales, setBiggestSales] = useState(getBiggestSales(data))
+  const [activeBar, setActiveBar] = useState(biggestSales, 0)
+
+  // Set activeBar to the bar of the highest sales when the mouse hover
+  const onMouseOver = (index) => {
+    setActiveBar(index);
+  };
+
+  // Set activeBar to the bar of the highest sales when the mouse leaves
+  const onMouseOut = () => {
+    setActiveBar(biggestSales, 0);
+  }
 
   // handle chart option
   const handleChange = (event) => {
     const value = event.target.value;
     setPeriod(value);
+
     // set data state based on user option
     setData(
       value === "monthly"
@@ -70,7 +94,18 @@ const Chart = () => {
             <XAxis dataKey="name" height={20} />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="sales" fill="url(#colorUv)" />
+            <Bar dataKey="sales" fill="lightgreen" barSize={40} onMouseOut={onMouseOut}>
+              {
+                data.map((entry, index) => (
+                  <Cell
+                    cursor="pointer"
+                    fill={index === activeBar ? 'url(#colorUv)' : 'lightblue'}
+                    key={`cell-${index}`}
+                    onMouseOver={() => onMouseOver(index)}
+                  />
+                ))
+              }
+            </Bar>
           </BarChart>
         </ResponsiveContainer>
       </section>
