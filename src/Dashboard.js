@@ -11,7 +11,7 @@ const Dashboard = () => {
           <Sidebar />
         </aside>
         <div className='!ml-20'>
-            <nav className="top-0 left-0 sticky">
+            <nav className="top-0 left-0 sticky z-10">
             <Navbar />
             </nav>
             <main className="bg-gray-50 p-4">
