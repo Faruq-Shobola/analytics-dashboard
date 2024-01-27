@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+
 import { Search, Person1, Bell, Calender } from "../assets";
 
 const Navbar = ({ toggleSidebar }) => {
+
+  const [startDate, setStartDate] = useState(new Date());
+
   return (
     <div className="grid grid-cols-10 p-3 items-center">
       <div className="col-span-5 lg:col-span-4 xl:col-span-5 2xl:col-span-6 flex justify-start md:justify-between items-center px-1 md:px-3 gap-3">
@@ -45,7 +52,13 @@ const Navbar = ({ toggleSidebar }) => {
         {/* Calender */}
         <div className="hidden md:flex items-center gap-3">
           <img src={Calender} alt="Logo" className="w-5 h-5" />
-          <p className="text-base font-semibold">November 15, 2023</p>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            
+            dateFormat="MMMM d, yyyy"
+            className="text-base font-semibold bg-transparent"
+          />
         </div>
 
         {/* Notification */}
