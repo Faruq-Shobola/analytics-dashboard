@@ -75,9 +75,14 @@ const Sidebar = () => {
               />
             </div>
           </label>
-        </div>
+        </div>  
       </div>
-    // </div>
+      <div className="flex flex-col items-center gap-[10px]">
+        <img src={Icon7} alt="Logo" />
+        <img src={Setting} alt="Logo" />
+        <img src={Icon8} alt="Logo" />
+      </div>
+    </div>
   );
 }
 
