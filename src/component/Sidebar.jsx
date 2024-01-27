@@ -11,9 +11,9 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col  h-full justify-between">
       <div className="flex flex-col items-center gap-5 text-base-content">
-        <img src={logo} alt="Logo" className="mb-3" />
+        <a href='/' className="cursor-pointer"><img src={logo} alt="Logo" className="mb-3" /></a>
         <img src={Active} alt="active" className="absolute right-0 top-24" />
-        <svg
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -38,8 +38,8 @@ const Sidebar = () => {
             d="M7.24 13.4301H5.34C3.15 13.4301 2 14.5801 2 16.7601V18.6601C2 20.8501 3.15 22.0001 5.33 22.0001H7.23C9.41 22.0001 10.56 20.8501 10.56 18.6701V16.7701C10.57 14.5801 9.42 13.4301 7.24 13.4301Z"
             fill="#0D062D"
           />
-        </svg>
-        <svg
+        </svg></a>
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -82,8 +82,8 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
-        <svg
+        </svg></a>
+        <a href='/' className='cursor-pointer'><svg
           className="h-6 w-"
           viewBox="0 0 24 24"
           fill="none"
@@ -126,8 +126,8 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
-        <svg
+        </svg></a>
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -174,8 +174,8 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
-        <svg
+        </svg></a>
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -226,8 +226,8 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
-        <svg
+        </svg></a>
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -262,7 +262,7 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
+        </svg></a>
         {/* Theme Controller */}
         <div class="relative toggle-container p-2 bg-base-200 rounded-full flex items-center justify-between w-max">
           <input
@@ -307,7 +307,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="flex flex-col items-center gap-5 text-base-content">
-        <svg
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -342,8 +342,8 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
-        <svg
+        </svg></a>
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -381,8 +381,8 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
-        <svg
+        </svg></a>
+        <a href='/' className='cursor-pointer'><svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
           fill="none"
@@ -438,7 +438,7 @@ const Sidebar = () => {
               />
             </g>
           </g>
-        </svg>
+        </svg></a>
       </div>
     </div>
   );

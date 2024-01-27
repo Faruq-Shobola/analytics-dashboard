@@ -74,19 +74,23 @@ const Chart = () => {
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="custom-tooltip" style={{
-          backgroundColor: '#000', 
-          padding: '5px 10px', 
-          borderRadius: '10px', 
-          color: 'white',
-        }}>
-          <p className="label" style={{ margin: 0 }}>${payload[0].value.toLocaleString()}</p>
+        <div
+          className="custom-tooltip"
+          style={{
+            backgroundColor: "#000",
+            padding: "5px 10px",
+            borderRadius: "10px",
+            color: "white",
+          }}
+        >
+          <p className="label" style={{ margin: 0 }}>
+            ${payload[0].value.toLocaleString()}
+          </p>
         </div>
       );
     }
     return null;
-  }
-
+  };
 
   return (
     <div className="overflow-x-auto h-96">
@@ -112,7 +116,7 @@ const Chart = () => {
       {/* Bar Chart */}
       <section className="pt-3">
         <ResponsiveContainer width="100%" height={325}>
-          <BarChart data={data} barSize={30}>
+          <BarChart data={data} barSize={30} margin={{ left:20 }}>
             <defs>
               <linearGradient
                 id="colorUv"
