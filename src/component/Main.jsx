@@ -13,10 +13,10 @@ const Main = () => {
       <div className="col-span-10 lg:col-span-10 xl:col-span-4 ">
         <Stat />
       </div>
-      <div className="col-span-6 bg-base-100 rounded-lg border border-base-200">
+      <div className="col-span-10 lg:col-span-6 bg-base-100 rounded-lg border border-base-200">
         <Orders />
       </div>
-      <div className="col-span-4 bg-base-100 rounded-lg border border-base-200">
+      <div className="col-span-10 lg:col-span-4 bg-base-100 rounded-lg border border-base-200">
         <Platform />
       </div>
     </section>

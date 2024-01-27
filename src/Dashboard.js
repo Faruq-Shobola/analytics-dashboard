@@ -13,7 +13,7 @@ const Dashboard = () => {
         {/* {isSidebarOpen && */}
           <aside className={`fixed z-50 h-screen top-0 py-5 bg-base-100 border-r border-base-200 transition-all duration-500 ${isSidebarOpen ? 'left-0' : '-left-full md:left-0'}`}>
            <Sidebar />
-           <div className="block md:hidden absolute top-5 left-24 z-100 rounded border border-neutral bg-base-100 p-2 flex justify-center items-center">
+           <div className="block md:hidden absolute top-5 left-24 z-100 rounded border border-neutral bg-base-100 flex justify-center items-center">
               <button className="btn transition btn-ghost" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
