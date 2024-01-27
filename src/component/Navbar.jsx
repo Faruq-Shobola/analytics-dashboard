@@ -6,13 +6,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Search, Person1, Bell, Calender } from "../assets";
 
 const Navbar = ({ toggleSidebar }) => {
-
   const [startDate, setStartDate] = useState(new Date());
 
   return (
     <div className="grid grid-cols-10 p-3 items-center">
       <div className="col-span-5 lg:col-span-4 xl:col-span-5 2xl:col-span-6 flex justify-start md:justify-between items-center px-1 md:px-3 gap-3">
         <div className="block md:hidden flex justify-center items-center rounded border border-base-200 bg-base-100 p-2">
+          {/* Hamburger menu icon */}
           <button
             className="rounded bg-base-100 p-2 text-base-content transition hover:text-secondary-content"
             onClick={toggleSidebar}
@@ -48,16 +48,15 @@ const Navbar = ({ toggleSidebar }) => {
         </div>
       </div>
 
-      <div className="col-span-5 lg:col-span-6 xl:col-span-5 2xl:col-span-4 flex justify-end items-center gap-3 px-1 md:px-4">
+      <div className="col-span-5 lg:col-span-6 xl:col-span-5 2xl:col-span-4 flex justify-end items-center gap-3 px-1 md:px-4 lg:gap-6">
         {/* Calender */}
         <div className="hidden md:flex items-center gap-3">
           <img src={Calender} alt="Logo" className="w-5 h-5" />
           <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
-            
             dateFormat="MMMM d, yyyy"
-            className="text-base font-semibold bg-transparent"
+            className="w-36 text-base font-semibold bg-transparent"
           />
         </div>
 
@@ -69,6 +68,7 @@ const Navbar = ({ toggleSidebar }) => {
             className="border p-2 border-neutral-content rounded-full w-10 h-10"
           />
         </div>
+
         {/* Profile */}
         <div className="flex items-center gap-2 lg:gap-4 bg-base-200 border border-neutral-content rounded-full px-2 lg:px-4 py-1 lg:py-2">
           <img src={Person1} alt="avatar" className="w-10 h-10 rounded-full" />
@@ -104,6 +104,7 @@ const Navbar = ({ toggleSidebar }) => {
                 </g>
               </svg>
             </div>
+            {/* Avatar Dropdown */}
             <ul
               tabIndex={0}
               className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"

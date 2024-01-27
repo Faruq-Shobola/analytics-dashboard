@@ -131,6 +131,7 @@ const Chart = () => {
             <XAxis dataKey="name" height={20} />
             <YAxis />
             <Tooltip content={<CustomTooltip />} />
+            {/* Each bar */}
             <Bar
               dataKey="sales"
               fill="lightgreen"
