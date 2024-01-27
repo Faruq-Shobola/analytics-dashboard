@@ -5,7 +5,7 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <div className="grid grid-cols-10 p-3 items-center">
       <div className="col-span-5 lg:col-span-4 xl:col-span-5 flex justify-start md:justify-between items-center px-1 md:px-3 gap-3">
-        <div className="block md:hidden flex justify-center items-center rounded border border-base-200 bg-base-100 p-2">
+        <div className="block md:hidden flex justify-center items-center rounded border border-neutral-content bg-base-100 p-2">
           <button
             className="rounded bg-base-100 p-2 text-base-content transition hover:text-secondary-content"
             onClick={toggleSidebar}
@@ -31,7 +31,7 @@ const Navbar = ({ toggleSidebar }) => {
         </a>
 
         {/* Search */}
-        <div className="hidden md:flex items-center gap-3 bg-base-100 border border-base-200 rounded-full p-3 lg:px-6 lg:py-3">
+        <div className="hidden md:flex items-center gap-3 bg-base-100 border border-neutral-content rounded-full p-3 lg:px-6 lg:py-3">
           <img src={Search} alt="Logo" className="w-5 h-5" />
           <input
             type="text"
@@ -53,11 +53,11 @@ const Navbar = ({ toggleSidebar }) => {
           <img
             src={Bell}
             alt="Logo"
-            className="border p-2 border-base-200 rounded-full w-10 h-10"
+            className="border p-2 border-neutral-content rounded-full w-10 h-10"
           />
         </div>
         {/* Profile */}
-        <div className="flex items-center gap-2 lg:gap-4 bg-base-200 border border-base-100 rounded-full px-2 lg:px-4 py-1 lg:py-2">
+        <div className="flex items-center gap-2 lg:gap-4 bg-base-200 border border-neutral-content rounded-full px-2 lg:px-4 py-1 lg:py-2">
           <img src={Person1} alt="Logo" className="w-10 h-10 rounded-full" />
           <div className="hidden lg:block text-right space-y-3">
             <h5 className="font-medium text-lg leading-3">Justin Bergson</h5>
