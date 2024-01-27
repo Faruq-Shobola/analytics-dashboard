@@ -7,16 +7,16 @@ const Dashboard = () => {
   return (
     <>
       <div className="">
-        <aside className="fixed overflow-auto h-screen left-0 top-0 w-20 py-5 bg-base-50">
+        <aside className="fixed overflow-auto h-screen left-0 top-0 w-20 py-5 bg-base-100 border-r border-base-200">
           <Sidebar />
         </aside>
-        <div className='!ml-20'>
-            <nav className="bg-base-50 top-0 left-0 sticky z-10">
+        <div className="!ml-20">
+          <nav className="bg-base-100 top-0 left-0 sticky z-10 border-b border-base-200 shadow-xs shadow-base-secondary">
             <Navbar />
-            </nav>
-            <main className="bg-base-200 p-4">
-                <Main />
-            </main>
+          </nav>
+          <main className="bg-base-200 p-4">
+            <Main />
+          </main>
         </div>
       </div>
     </>

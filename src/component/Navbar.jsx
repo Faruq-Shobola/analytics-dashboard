@@ -32,9 +32,8 @@ const Navbar = () => {
           <img
             src={Bell}
             alt="Logo"
-            className="border p-2 border-base-100 rounded-full w-10 h-10"
+            className="border p-2 border-base-200 rounded-full w-10 h-10"
           />
-          <span className="badge badge-xs badge-info text-right absolute top-0.5 right-0"></span>
         </div>
         {/* Profile */}
         <div className="flex items-center gap-4 bg-base-200 border border-base-100 rounded-full px-4 py-2">
