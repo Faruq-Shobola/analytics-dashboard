@@ -9,10 +9,10 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col h-full justify-between">
+    <div className="flex flex-col  h-full justify-between">
       <div className="flex flex-col items-center gap-5 text-base-content">
         <img src={logo} alt="Logo" className="mb-3" />
-        <img src={Active} className="absolute right-0 top-24"/>
+        <img src={Active} className="absolute right-0 top-24" />
         <svg
           className="h-7 w-7"
           viewBox="0 0 24 24"
@@ -275,7 +275,7 @@ const Sidebar = () => {
           />
           {/* Background that moves based on the theme */}
           <div
-            className={`toggle-bg w-9 h-9 absolute left-2 top-2 rounded-full p-1 transition-transform duration-300 ease-in-out ${
+            className={`toggle-bg w-10 h-10 absolute left-2 top-2 rounded-full p-1 transition-transform duration-300 ease-in-out ${
               isDarkMode
                 ? "translate-y-12 bg-gray-600"
                 : "translate-y-0 bg-green-600"
@@ -283,13 +283,25 @@ const Sidebar = () => {
           ></div>
           <label
             for="theme-toggle"
-            class="flex items-center justify-center text-base-content cursor-pointer flex-col gap-2"
+            class="flex items-center cursor-pointer flex-col gap-2"
           >
-            <div class="flex items-center justify-center toggle-bg z-10 rounded-full p-1 transition-transform duration-300 ease-in-out">
-              <img src={Light} alt="Liight theme" className="w-9 h-9" />
+            <div class="toggle-bg z-10 rounded-full p-1 transition-transform duration-200 ease-in-out">
+              <img
+                src={Light}
+                alt="Light Theme"
+                className={`w-8 h-8 ${
+                  isDarkMode ? "opacity-50" : "opacity-100"
+                }`}
+              />
             </div>
-            <div className="flex items-center justify-center toggle-bg z-10 rounded-full p-1 transition-transform duration-300 ease-in-out">
-              <img src={Moon} alt="Liight theme" className="w-9 h-9" />
+            <div className="toggle-bg z-10 rounded-full p-1 transition-transform duration-300 ease-in-out">
+              <img
+                src={Moon}
+                alt="Dark Theme"
+                className={`w-8 h-8 ${
+                  isDarkMode ? "opacity-100" : "opacity-50"
+                }`}
+              />
             </div>
           </label>
         </div>
