@@ -4,7 +4,7 @@ import { Search, Person1, ArrowDown, Bell, Calender } from "../assets";
 const Navbar = ({ toggleSidebar }) => {
   return (
     <div className="grid grid-cols-10 p-3 items-center">
-      <div className="col-span-5 lg:col-span-4 xl:col-span-5 flex justify-start md:justify-between items-center px-1 md:px-3 gap-3">
+      <div className="col-span-5 lg:col-span-4 xl:col-span-6 flex justify-start md:justify-between items-center px-1 md:px-3 gap-3">
         <div className="block md:hidden flex justify-center items-center rounded border border-base-200 bg-base-100 p-2">
           <button
             className="rounded bg-base-100 p-2 text-base-content transition hover:text-secondary-content"
@@ -41,9 +41,9 @@ const Navbar = ({ toggleSidebar }) => {
         </div>
       </div>
 
-      <div className="col-span-5 lg:col-span-6 xl:col-span-5 flex justify-end md:justify-between items-center gap-3 px-1 md:px-2">
+      <div className="col-span-5 lg:col-span-6 xl:col-span-4 flex justify-end items-center gap-3 px-1 md:px-4">
         {/* Calender */}
-        <div className="hidden md:flex items-center gap-3  px-4 py-2">
+        <div className="hidden md:flex items-center gap-3">
           <img src={Calender} alt="Logo" className="w-5 h-5" />
           <p className="text-base font-semibold">November 15, 2023</p>
         </div>
