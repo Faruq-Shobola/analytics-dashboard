@@ -96,22 +96,22 @@ const Navbar = ({ toggleSidebar }) => {
               className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
             >
               <li className="py-0.5 text-sm text-base-content">
-                <a>Dashboard</a>
+                <a href="/">Dashboard</a>
               </li>
               <li className="py-0.5 text-sm text-base-content">
-                <a>Notification</a>
+                <a href="/">Notification</a>
               </li>
               <li className="py-0.5 text-sm text-base-content">
-                <a>Setting</a>
+                <a href="/">Setting</a>
               </li>
               <li className="py-0.5 text-sm text-base-content">
-                <a>Message</a>
+                <a href="/">Message</a>
               </li>
               <li className="py-0.5 text-sm text-base-content">
-                <a>Profile</a>
+                <a href="/">Profile</a>
               </li>
               <li className="py-0.5 text-sm text-red-600">
-                <a>
+                <a href="/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
