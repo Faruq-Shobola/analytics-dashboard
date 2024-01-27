@@ -12,7 +12,7 @@ const Dashboard = () => {
       <div className="">
         {/* {isSidebarOpen && */}
         <aside
-          className={`fixed z-50 h-screen top-0 py-5 bg-base-100 border-r border-base-200 transition-all duration-500 ${
+          className={`fixed z-50 h-screen top-0 w-20 py-5 bg-base-100 border-r border-base-200 transition-all duration-500 ${
             isSidebarOpen ? "left-0" : "-left-full md:left-0"
           }`}
         >
