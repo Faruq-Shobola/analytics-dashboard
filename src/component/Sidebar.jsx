@@ -17,7 +17,6 @@ import {
 
 const Sidebar = () => {
   return (
-    // <div className="flex flex-row">
       <div className="flex flex-col h-full justify-between">
         <div className="flex flex-col items-center gap-[10px]">
           <img src={Active} alt="Logo" className='absolute right-0 top-20'/>
@@ -39,7 +38,6 @@ const Sidebar = () => {
           <img src={Icon8} alt="Logo" />
         </div>
       </div>
-    // </div>
   );
 }
 

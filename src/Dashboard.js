@@ -10,10 +10,9 @@ const Dashboard = () => {
   return (
     <>
       <div className="">
-        {/* {isSidebarOpen && */}
-          <aside className={`fixed z-50 h-screen top-0 py-5 bg-slate-100 transition-all duration-500 ${isSidebarOpen ? 'left-0' : '-left-full md:left-0'}`}>
+          <aside className={`fixed z-20 h-screen top-0 py-5 bg-slate-100 transition-all duration-500 ${isSidebarOpen ? 'left-0' : '-left-full md:left-0'}`}>
            <Sidebar />
-           <div className="absolute top-5 left-24 z-100 rounded border border-black bg-gray-100 p-2 flex justify-center items-center">
+           <div className="block md:hidden absolute top-5 left-24 flex justify-center items-center rounded border border-black bg-gray-100 p-2">
               <button className="text-gray-800 transition hover:text-gray-800/75 btn-ghost" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +27,6 @@ const Dashboard = () => {
               </button>
           </div>
           </aside> 
-        {/* } */}
           <div className='ml-0 md:!ml-20'>
             <nav className="top-0 left-0 sticky z-10">
             <Navbar toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
