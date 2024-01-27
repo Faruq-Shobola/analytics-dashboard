@@ -20,7 +20,7 @@ const Orders = () => {
         </a>
       </section>
       {/* Orders Table */}
-      <section className="p-5">
+      <section className="p-5 overflow-x-auto">
         <table className="table">
             {/* head */}
             <thead>

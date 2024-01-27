@@ -35,7 +35,7 @@ const Sidebar = () => {
         <img src={Icon5} alt="Logo" />
         <img src={Icon6} alt="Logo" />
         {/* Theme Controller */}
-        <div class="relative toggle-container p-2 bg-white rounded-full flex items-center justify-between w-max">
+        <div class="relative toggle-container p-2 bg-base-200 rounded-full flex items-center justify-between w-max">
           <input
             id="theme-toggle"
             type="checkbox"

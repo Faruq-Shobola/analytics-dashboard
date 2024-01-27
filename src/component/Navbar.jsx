@@ -3,18 +3,18 @@ import { Search, Person1, ArrowDown, Bell, Calender } from "../assets";
 
 const Navbar = () => {
   return (
-    <div className="bg-slate-50 grid grid-cols-10 p-3 items-center">
+    <div className="grid grid-cols-10 p-3 items-center">
       <div className="col-span-6 flex justify-between items-center px-3">
         <a className="font-medium text-2xl capitalize" href="/">
           dashboard
         </a>
 
         {/* Search */}
-        <div className="flex items-center gap-3 bg-white border border-gray-200 rounded-full px-6 py-3">
+        <div className="flex items-center gap-3 bg-base-100 border border-base-200 rounded-full px-6 py-3">
           <img src={Search} alt="Logo" className="w-5 h-5" />
           <input
             type="text"
-            className=" w-64 outline-none text-gray-400 text-lg"
+            className="bg-transparent w-64 outline-none text-base-content text-lg"
             placeholder="Search"
           />
         </div>
@@ -32,16 +32,16 @@ const Navbar = () => {
           <img
             src={Bell}
             alt="Logo"
-            className="border p-2 border-gray-200 rounded-full w-10 h-10"
+            className="border p-2 border-base-100 rounded-full w-10 h-10"
           />
           <span className="badge badge-xs badge-info text-right absolute top-0.5 right-0"></span>
         </div>
         {/* Profile */}
-        <div className="flex items-center gap-4 bg-white border border-gray-200 rounded-full px-4 py-2">
+        <div className="flex items-center gap-4 bg-base-200 border border-base-100 rounded-full px-4 py-2">
           <img src={Person1} alt="Logo" className="w-10 h-10 rounded-full" />
           <div className="text-right space-y-3">
             <h5 className="font-medium text-lg leading-3">Justin Bergson</h5>
-            <p className="text-base text-gray-500 leading-3">
+            <p className="text-base text-base-content leading-3">
               Justin@gmail.com
             </p>
           </div>
@@ -53,19 +53,19 @@ const Navbar = () => {
               tabIndex={0}
               className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
             >
-              <li className="py-0.5 text-sm text-gray-600">
+              <li className="py-0.5 text-sm text-base-content">
                 <a>Dashboard</a>
               </li>
-              <li className="py-0.5 text-sm text-gray-600">
+              <li className="py-0.5 text-sm text-base-content">
                 <a>Notification</a>
               </li>
-              <li className="py-0.5 text-sm text-gray-600">
+              <li className="py-0.5 text-sm text-base-content">
                 <a>Setting</a>
               </li>
-              <li className="py-0.5 text-sm text-gray-600">
+              <li className="py-0.5 text-sm text-base-content">
                 <a>Message</a>
               </li>
-              <li className="py-0.5 text-sm text-gray-600">
+              <li className="py-0.5 text-sm text-base-content">
                 <a>Profile</a>
               </li>
               <li className="py-0.5 text-sm text-red-600">
