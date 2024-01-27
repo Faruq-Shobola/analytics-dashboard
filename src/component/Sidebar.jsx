@@ -12,7 +12,7 @@ const Sidebar = () => {
     <div className="flex flex-col  h-full justify-between">
       <div className="flex flex-col items-center gap-5 text-base-content">
         <img src={logo} alt="Logo" className="mb-3" />
-        <img src={Active} className="absolute right-0 top-24" />
+        <img src={Active} alt="active" className="absolute right-0 top-24" />
         <svg
           className="h-7 w-7"
           viewBox="0 0 24 24"

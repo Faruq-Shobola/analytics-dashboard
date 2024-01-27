@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import LineData from "../line_chart_data.json";
 import { Cart, Box, Rotate, Coin, Increase, Decrease } from "../assets";
-import {
-  Area,
-  AreaChart,
-  YAxis,
-  XAxis,
-  ResponsiveContainer,
-} from "recharts";
+import { Area, AreaChart, YAxis, XAxis, ResponsiveContainer } from "recharts";
 
 const Stat = () => {
-  const [data1, setData] = useState(LineData["increase"]);
-  const [data2, setData2] = useState(LineData["decrease"]);
+  const data1 = LineData["increase"];
+  const data2 = LineData["decrease"];
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 h-full">
@@ -48,7 +42,9 @@ const Stat = () => {
             </div>
           </div>
           {/* stat details */}
-          <div className="stat-title text-xl text-base-content">Total Order</div>
+          <div className="stat-title text-xl text-base-content">
+            Total Order
+          </div>
           <div className="stat-value font-medium">350</div>
           <div className="stat-desc flex items-center gap-2 flex-wrap text-sm pt-2">
             <div className="px-3 py-1 bg-green-200 text-success rounded-full flex items-center gap-1">
@@ -92,7 +88,9 @@ const Stat = () => {
             </div>
           </div>
           {/* stat details */}
-          <div className="stat-title text-xl text-base-content">Total Refund</div>
+          <div className="stat-title text-xl text-base-content">
+            Total Refund
+          </div>
           <div className="stat-value font-medium">270</div>
           <div className="stat-desc flex items-center gap-2 flex-wrap text-sm pt-2">
             <div className="px-3 py-1 bg-red-200 text-error rounded-full flex items-center gap-1">
@@ -136,7 +134,9 @@ const Stat = () => {
             </div>
           </div>
           {/* stat details */}
-          <div className="stat-title text-xl text-base-content">Average Sales</div>
+          <div className="stat-title text-xl text-base-content">
+            Average Sales
+          </div>
           <div className="stat-value font-medium">1567</div>
           <div className="stat-desc flex items-center gap-2 flex-wrap text-sm pt-2">
             <div className="px-3 py-1 bg-red-200 text-error rounded-full flex items-center gap-1">
@@ -180,7 +180,9 @@ const Stat = () => {
             </div>
           </div>
           {/* stat details */}
-          <div className="stat-title text-xl text-base-content">Total Income</div>
+          <div className="stat-title text-xl text-base-content">
+            Total Income
+          </div>
           <div className="stat-value font-medium">$350.00</div>
           <div className="stat-desc flex items-center gap-2 flex-wrap text-sm pt-2">
             <div className="px-3 py-1 bg-green-200 text-success rounded-full flex items-center gap-1">
