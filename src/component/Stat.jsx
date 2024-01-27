@@ -14,7 +14,7 @@ const Stat = () => {
   const [data2, setData2] = useState(LineData["decrease"]);
 
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-5 h-full">
+    <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-5 h-full">
       {/* Stat-1 */}
       <div className="flex justify-between bg-base-100 rounded-lg border border-base-200">
         <div className="stat !w-full">

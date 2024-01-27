@@ -11,7 +11,7 @@ import {
 
 const Orders = () => {
   return (
-    <section className="overflow-x-auto h-96">
+    <section className="overflow-scroll h-96">
       {/* Heading */}
       <section className="flex justify-between  p-5 pb-2">
         <h5 className="font-medium text-xl capitalize"> last orders</h5>

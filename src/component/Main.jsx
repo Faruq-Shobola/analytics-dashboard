@@ -6,11 +6,11 @@ import Stat from './Stat';
 
 const Main = () => {
   return (
-    <section className="grid grid-cols-10 gap-5 p-3">
-      <div className="col-span-6 p-5 bg-base-100 rounded-lg border border-base-200">
+    <section className="grid grid-cols-10 gap-5 p-0 md:p-3">
+      <div className="col-span-10 lg:col-span-10 xl:col-span-6 p-5 bg-base-100 rounded-lg border border-base-200">
         <Chart />
       </div>
-      <div className="col-span-4">
+      <div className="col-span-10 lg:col-span-10 xl:col-span-4 ">
         <Stat />
       </div>
       <div className="col-span-6 bg-base-100 rounded-lg border border-base-200">
